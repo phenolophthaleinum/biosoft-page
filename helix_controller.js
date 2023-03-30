@@ -12,6 +12,7 @@ window.requestAnimFrame = (function() {
 //Initialise
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+// ctx.rotate(90 * (Math.PI / 180));
 ctx.scale(6, 6);
 var onMobile = false;
 

@@ -70,3 +70,13 @@ accordionElement.addEventListener('hide.bs.collapse', function (event) {
     // document.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest"});
   
 });
+
+// tiles = document.querySelectorAll(".bg-img");
+// Array.from(tiles).forEach(tile => {
+//   tile.addEventListener("mouseenter", () => {
+//     gsap.fromTo(tile, {})
+//   });
+//   tile.addEventListener("mouseleave", () => {
+
+//   });
+// });
