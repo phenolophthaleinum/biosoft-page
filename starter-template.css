@@ -274,7 +274,7 @@ main {
   width: 100%;
   justify-content: space-between;
 }
-.box {
+/* .box {
   width: 30%;
   flex: 1 1 2%;
   transition: all 0.3s ease-in-out;
@@ -282,20 +282,25 @@ main {
 
 .box:hover {
   flex-grow: 2;
-}
+} */
 .tile-col {
-  /* flex: 1; */
-  width: 30%;
-  flex: 1 1 2%;
+  flex: 1;
+  min-width: 300px;
+  min-height: 400px;
+  /* width: 30%;
+  flex: 1 1 2%; */
   /* flex-grow: 1;
   flex-shrink: 1; */
   /* flex-basis: 33.33%; */
   /* width: 50%; */
   /* max-width: 400px; */
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .tile {
+  overflow: hidden;
+  min-width: 275px;
+  min-height: 400px;
   /* min-width: 275px; */
   /* min-height: 400px; */
   /* max-width: 400px;
@@ -305,7 +310,7 @@ main {
   justify-content: center;
   align-items: center;
   transform: scale(1);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* .tile:hover ~ .tile-col:not(:hover) {
@@ -360,7 +365,6 @@ main {
 }
 
 .tile:hover {
-  transform: scale(1.05);
   /* max-height: 400px; */
   /* height: 400px; */
   /* max-width: 500px; */
@@ -369,8 +373,9 @@ main {
   width: 100%; */
   /* width: 100vw; */
   /* flex-grow: 2; */
-  min-width: 275px;
-  min-height: 400px;
+  /* min-width: 275px;
+  min-height: 400px; */
+  transform: scale(1.05);
   z-index: 1;
 }
 
@@ -397,14 +402,49 @@ main {
   right: 0;
   bottom: 0; */
   z-index: 1;
+  transform: translateY(150%);
+  transition: all 0.3s ease-in-out;
+}
+.tile-content {
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(150%);
+  transition: all 0.3s ease-in-out;
+}
+
+.tile:hover .tile-content {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.tile:hover .tile-title {
+  opacity: 1;
+  transform: translateY(0%);
 }
 
 .tile-col:hover {
-  min-width: 275px;
-  min-height: 400px;
-  flex-grow: 2;
-  height: 100%;
+  /* min-width: 275px;
+  min-height: 400px; */
+  flex-grow: 4;
+  /* height: 100%; */
 }
+
+.flex-container {
+  display: flex;
+  flex-grow: 2; /* make the first two elements larger */
+}
+
+/* .tile-col:hover:not(:hover.large-tile) {
+  flex-grow: 1;
+} */
+
+/* .tile-col:nth-child(-n+2):hover {
+  flex-grow: 4;
+} */
+
+/* .large-tile {
+  flex-basis: 50%;
+} */
 
 .tile-col a {
   position: relative;
