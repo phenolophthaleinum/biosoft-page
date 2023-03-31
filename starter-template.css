@@ -287,6 +287,7 @@ main {
   flex: 1;
   min-width: 300px;
   min-height: 400px;
+  /* max-height: 1000px; */
   /* width: 30%;
   flex: 1 1 2%; */
   /* flex-grow: 1;
@@ -294,10 +295,12 @@ main {
   /* flex-basis: 33.33%; */
   /* width: 50%; */
   /* max-width: 400px; */
+  /* overflow: hidden; */
   transition: all 0.3s ease-in-out;
 }
 
 .tile {
+  /* flex: 1 1 auto; */
   overflow: hidden;
   min-width: 275px;
   min-height: 400px;
@@ -305,6 +308,7 @@ main {
   /* min-height: 400px; */
   /* max-width: 400px;
   max-height: 200px; */
+  /* max-width: 600px; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -396,8 +400,8 @@ main {
 }
 
 .tile-title {
-  /* position: absolute;
-  top: 0;
+  position: sticky;
+  /* top: 0;
   left: 0;
   right: 0;
   bottom: 0; */
@@ -406,6 +410,9 @@ main {
   transition: all 0.3s ease-in-out;
 }
 .tile-content {
+  /* overflow-y: auto; */
+  /* white-space: normal;
+  overflow: auto;  */
   z-index: 1;
   opacity: 0;
   transform: translateY(150%);
