@@ -53,6 +53,7 @@ gsap.to(".stripe", {
 // });
 
 const accordionElement = document.getElementById('accordionFlushExample');
+console.log(accordionElement);
 
 accordionElement.addEventListener('shown.bs.collapse', function (event) {
   // code to run after accordion item is shown
