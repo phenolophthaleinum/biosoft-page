@@ -50,7 +50,6 @@ const MyThree = () => {
     composer.render();
   }
 
-  console.log('1')
   useEffect(() => {
     
     const container = document.getElementById("container");
